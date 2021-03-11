@@ -210,7 +210,7 @@ namespace File_manager
                     Console.WriteLine("Доступный каталог.");
             }
         }
-        public double DirSize(string dirName, ref double size)
+        private double DirSize(string dirName, ref double size)
         {
             try
             {
@@ -232,7 +232,7 @@ namespace File_manager
                 return -1;
             }
         }
-        public void DirDel(string dirName)
+        private void DirDel(string dirName)
         {
             DirectoryInfo dir = new DirectoryInfo(dirName);
             DirectoryInfo[] dirs = dir.GetDirectories();
@@ -248,7 +248,7 @@ namespace File_manager
                     d.Delete();
             }
         }
-        public void DirCopy(string dirName, string to)
+        private void DirCopy(string dirName, string to)
         {
             string[] files = Directory.GetFiles(dirName);
             string[] folders = Directory.GetDirectories(dirName);

@@ -6,7 +6,7 @@ namespace File_manager
 {
     class GetFiles
     {
-        public int depth;   // глубина вывода каталога
+        private int depth;   // глубина вывода каталога
 
         public GetFiles(int depth)
         {
